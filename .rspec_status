@@ -1,0 +1,4 @@
+example_id                                   | status | run_time        |
+-------------------------------------------- | ------ | --------------- |
+./spec/aralyne_owm/forecast_spec.rb[1:1:1:1] | passed | 0.00941 seconds |
+./spec/aralyne_owm/forecast_spec.rb[1:1:2:1] | passed | 0.00421 seconds |
