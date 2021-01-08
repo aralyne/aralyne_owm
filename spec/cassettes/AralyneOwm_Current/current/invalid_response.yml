@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.openweathermap.org/data/2.5/weather?appid=123456789&id=&lang=pt_br&units=metric
+    uri: http://api.openweathermap.org/data/2.5/weather?appid=123&id=&lang=pt_br&units=metric
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Fri, 08 Jan 2021 15:42:36 GMT
+      - Fri, 08 Jan 2021 16:47:27 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -39,5 +39,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"cod":"400","message":"Nothing to geocode"}'
-  recorded_at: Fri, 08 Jan 2021 15:42:43 GMT
+  recorded_at: Fri, 08 Jan 2021 16:47:33 GMT
 recorded_with: VCR 6.0.0

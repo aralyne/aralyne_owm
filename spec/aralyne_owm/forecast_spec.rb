@@ -6,8 +6,9 @@ RSpec.describe AralyneOwm::Forecast do
     context 'When return forecast weather data objec' do
       it 'must return forecast weather data object', :vcr do
         city_id = '3395981'
+        api_key = '123'
         response = VCR.use_cassette('AralyneOwm_Forecast/forecast/valid_response') do
-          AralyneOwm::Forecast.new(city_id).call
+          AralyneOwm::Forecast.new(city_id, api_key).call
         end
 
         expect(response).to have_key("cod")
@@ -17,8 +18,9 @@ RSpec.describe AralyneOwm::Forecast do
     context 'When status code 400' do
       it'when status code 400', :vcr do
         city_id = nil
+        api_key = '123'
         response = VCR.use_cassette('AralyneOwm_Forecast/forecast/invalid_response') do
-          AralyneOwm::Forecast.new(city_id).call
+          AralyneOwm::Forecast.new(city_id, api_key).call
         end
 
         expect(response).to have_key("cod")
