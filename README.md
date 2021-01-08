@@ -24,7 +24,7 @@ Or install it yourself as:
 
 # get current weather by city id
 
-@api = AralyneOwm::Current.new(city_id, @api_key).call
+AralyneOwm::Current.new(city_id, @api_key).call
 
 # get weather forecast by city id
 AralyneOwm::Forecast.new(city_id, @api_key).call
