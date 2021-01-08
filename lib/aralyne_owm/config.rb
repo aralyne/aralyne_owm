@@ -1,8 +1,8 @@
 require 'httparty'
 
 class AralyneOwm::Config
-  def initialize(city_id, endpoint)
-    @api_key = 'e88c1515be1de476a1469d4bdb9cb1eb'
+  def initialize(city_id, endpoint, api_key)
+    @api_key = api_key
     @city_id = city_id
     @endpoint = endpoint
     @api_response = HTTParty.get(uri)
